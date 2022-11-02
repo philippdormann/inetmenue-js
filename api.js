@@ -3,6 +3,8 @@ const mercurius = require('mercurius');
 const { getFoodItems } = require('./lib');
 const sources = require("./inetmenue-sources.json");
 const app = Fastify()
+require("dotenv").config();
+const port = process.env.PORT || 3000;
 
 const schema = `
   type Allergen {
@@ -38,6 +40,6 @@ app.register(mercurius, {
   graphiql: true
 })
 
-app.listen({ port: 3000 }).then(() => {
-  console.log("listening on http://localhost:3000, also see http://localhost:3000/graphiql");
+app.listen({ port, host: '0.0.0.0' }).then(() => {
+  console.log(`listening on http://localhost:${port}, also see http://localhost:${port}/graphiql`);
 })
