@@ -5,7 +5,7 @@ specifiers:
   cheerio: ^1.0.0-rc.12
   fastify: ^4.9.2
   graphql: ^16.6.0
-  mercurius: ^11.2.0
+  mercurius: ^11.3.0
   nodemon: ^2.0.20
 
 dependencies:
@@ -13,7 +13,7 @@ dependencies:
   cheerio: 1.0.0-rc.12
   fastify: 4.9.2
   graphql: 16.6.0
-  mercurius: 11.2.0_graphql@16.6.0
+  mercurius: 11.3.0_graphql@16.6.0
 
 devDependencies:
   nodemon: 2.0.20
@@ -727,8 +727,8 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /mercurius/11.2.0_graphql@16.6.0:
-    resolution: {integrity: sha512-xKqNx/QzJpW+FBsSHUTwBS+QPoevZ/o1jgMTxmIIBio0+wgINtlWNaoX2asUwTHoB3BG1IkNgY+PDsxra3y9iA==}
+  /mercurius/11.3.0_graphql@16.6.0:
+    resolution: {integrity: sha512-W/Yi4fEP9Mma9lWTm9ijZPmQNm4vij+TplnJ2w1/bjjH7unP9LkU5M1SSiDJSUNPhVmjneZRBqA2f5N0tUsfwg==}
     engines: {node: '>=14.19.3'}
     peerDependencies:
       graphql: ^16.0.0
