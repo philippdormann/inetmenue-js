@@ -16,7 +16,7 @@ hosted version: https://inetmenue.onrender.com/graphiql
 pnpm i inetmenue
 ```
 ```
-import { getFoodItems } from "inetmenue";
+import { getFoodItems } from "inetmenue/index.js";
 
 const foodItems = await getFoodItems({ kw: "2022W45", source: "fag-neustadt" })
 console.log(foodItems);
