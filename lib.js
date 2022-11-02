@@ -2,12 +2,10 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const sources = require("./sources.json")
 const getFoodItems = async ({ kw = "", source = "" }) => {
-    if (!kw) {
-        return [];
-    }
-    if (!sources.includes(source)) {
-        return [];
-    }
+    if (!kw) return [];
+    const currentYear = (new Date()).getFullYear();
+    if (kw.length === 2 && !kw.includes(currentYear)) kw = `${currentYear}W${kw}`;
+    if (!sources.includes(source)) return [];
     const data = (await axios.request({
         method: 'GET',
         url: `https://${source}.inetmenue.de/fs/menu/week/${kw}`,
@@ -44,7 +42,7 @@ const getFoodItems = async ({ kw = "", source = "" }) => {
         out.push({ category, image, title, description, price, allergeneInfo, dayKey: daykeys[c], dayLong: day?.dayLong, dayShort: day?.dayShort });
         c++;
     });
-    return out
+    return out;
 }
 exports.getFoodItems = getFoodItems
 exports.getSources = () => sources;
