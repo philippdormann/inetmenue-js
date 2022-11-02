@@ -47,3 +47,4 @@ const getFoodItems = async (_, { kw = "", source = "" }) => {
     return out
 }
 exports.getFoodItems = getFoodItems
+exports.getSources = () => sources;
