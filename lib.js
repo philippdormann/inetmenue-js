@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const sources = require("./inetmenue-sources.json")
-const getFoodItems = async (_, { kw = "", source = "" }) => {
+const getFoodItems = async ({ kw = "", source = "" }) => {
     if (!kw) {
         return [];
     }

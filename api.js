@@ -27,7 +27,7 @@ const schema = `
 `;
 const resolvers = {
   Query: {
-    food: getFoodItems,
+    food: (_, { kw, source }) => getFoodItems({ kw, source }),
     sources: () => sources
   }
 }
