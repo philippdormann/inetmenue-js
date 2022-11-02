@@ -1,6 +1,7 @@
 const Fastify = require('fastify')
 const mercurius = require('mercurius');
 const { getFoodItems } = require('./lib');
+const sources = require("./inetmenue-sources.json");
 const app = Fastify()
 
 const schema = `
@@ -21,11 +22,13 @@ const schema = `
   }
   type Query {
     food(kw: String, source: String): [FoodItem]
+    sources: [String]
   }
 `;
 const resolvers = {
   Query: {
     food: getFoodItems,
+    sources: () => sources
   }
 }
 
