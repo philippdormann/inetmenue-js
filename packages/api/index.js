@@ -1,6 +1,6 @@
 const Fastify = require('fastify')
 const mercurius = require('mercurius');
-const { getFoodItems, getSources } = require('inetmenue');
+const { getFoodItems, getSources } = require('../lib/index');
 const app = Fastify()
 require("dotenv").config();
 const port = process.env.PORT || 3000;

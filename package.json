@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "release": "bumpp package.json packages/*/package.json --all",
-    "ci:readme": "zx scripts/readme.mjs",
+    "ci:publish": "zx scripts/publish.mjs",
+    "start": "pnpm -C packages/api run start",
     "dev": "pnpm -C packages/api run dev"
   },
   "devDependencies": {

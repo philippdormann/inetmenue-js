@@ -2,7 +2,7 @@
 inetmenue.de parser for js
 
 ## Data Sources
-currently 360 sources, see [sources.json](./sources.json) for the full list
+currently 360 sources, see [sources.json](./packages/lib/sources.json) for the full list
 
 ## GraphQL Usage
 ```

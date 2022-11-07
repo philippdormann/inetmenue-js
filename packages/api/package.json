@@ -6,7 +6,6 @@
     "dotenv": "^16.0.3",
     "fastify": "^4.9.2",
     "graphql": "^16.6.0",
-    "inetmenue": "workspace:*",
     "ioredis": "^5.2.4",
     "mercurius": "^11.3.0"
   },
