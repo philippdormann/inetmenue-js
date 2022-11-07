@@ -1,12 +1,13 @@
 const Fastify = require('fastify')
 const mercurius = require('mercurius');
-const { getFoodItems, getSources } = require('./index');
+const { getFoodItems, getSources } = require('inetmenue');
 const app = Fastify()
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 
 let redisclient = undefined
 if (process.env.CACHE_REDIS_URL) {
+  console.log("init with redis cache");
   const Redis = require('ioredis');
   redisclient = new Redis(process.env.CACHE_REDIS_URL);
 }

@@ -1,0 +1,23 @@
+{
+  "name": "inetmenue-api",
+  "version": "0.0.2",
+  "main": "index.js",
+  "repository": "https://github.com/philippdormann/inetmenue-js",
+  "author": "Philipp Dormann <hi@philippdormann.de>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fastify": "^4.9.2",
+    "graphql": "^16.6.0",
+    "inetmenue": "workspace:*",
+    "ioredis": "^5.2.4",
+    "mercurius": "^11.3.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
