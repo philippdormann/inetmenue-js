@@ -64,5 +64,5 @@ app.register(mercurius, {
 })
 
 app.listen({ port, host: '0.0.0.0' }).then(() => {
-  console.log(`listening on http://localhost:${port}, also see http://localhost:${port}/graphiql`);
+  console.log(`listening on http://localhost:${port}/graphql, also see http://localhost:${port}/graphiql`);
 })
