@@ -2,6 +2,10 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "dev": "pnpm -C api run dev"
+    "release": "bumpp package.json packages/*/package.json --all",
+    "dev": "pnpm -C packages/api run dev"
+  },
+  "devDependencies": {
+    "bumpp": "^8.2.1"
   }
 }
