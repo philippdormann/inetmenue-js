@@ -28,9 +28,13 @@ const schema = `
     dayLong: String
     allergeneInfo: [Allergen]
   }
+  type SourceItem {
+    short: String
+  }
   type Query {
     food(kw: String, source: String): [FoodItem]
     sources: [String]
+    sourcesObjects: [SourceItem]
   }
 `;
 
@@ -53,7 +57,10 @@ async function getFoodItemsWithCache({ kw, source }) {
 const resolvers = {
   Query: {
     food: (_, { kw, source }) => getFoodItemsWithCache({ kw, source }),
-    sources: () => getSources()
+    sources: () => getSources(),
+    sourcesObjects: () => getSources().map((s) => {
+      return { short: s };
+    })
   }
 }
 
