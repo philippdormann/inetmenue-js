@@ -1,6 +1,6 @@
 {
   "name": "inetmenue",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "api.js",
   "repository": "https://github.com/philippdormann/inetmenue-js",
   "author": "Philipp Dormann <hi@philippdormann.de>",
