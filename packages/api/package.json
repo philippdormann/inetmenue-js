@@ -4,10 +4,10 @@
   "main": "index.js",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "fastify": "^4.9.2",
+    "fastify": "^4.10.2",
     "graphql": "^16.6.0",
     "ioredis": "^5.2.4",
-    "mercurius": "^11.3.0",
+    "mercurius": "^11.4.0",
     "inetmenue": "workspace:*"
   },
   "scripts": {
